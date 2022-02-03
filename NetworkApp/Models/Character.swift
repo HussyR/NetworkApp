@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// Можно упускать ненужные поля
 struct Character : Codable {
     let id: Int
     let name, status, species, type: String

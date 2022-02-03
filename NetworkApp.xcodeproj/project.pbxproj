@@ -19,6 +19,10 @@
 		837FF9F327ABBEB8008D0E35 /* CharacterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FF9F227ABBEB8008D0E35 /* CharacterPage.swift */; };
 		837FF9F527AC1DAE008D0E35 /* UIView+Constrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FF9F427AC1DAE008D0E35 /* UIView+Constrains.swift */; };
 		837FF9FA27AC1F4C008D0E35 /* RickAndMortyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FF9F927AC1F4C008D0E35 /* RickAndMortyTableViewCell.swift */; };
+		837FF9FC27AC36A0008D0E35 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FF9FB27AC36A0008D0E35 /* DetailViewController.swift */; };
+		837FF9FE27AC4689008D0E35 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FF9FD27AC4689008D0E35 /* DetailView.swift */; };
+		837FFA0027AC46B8008D0E35 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FF9FF27AC46B8008D0E35 /* DetailTableViewCell.swift */; };
+		837FFA0227AC4788008D0E35 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FFA0127AC4788008D0E35 /* Episode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		837FF9F227ABBEB8008D0E35 /* CharacterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPage.swift; sourceTree = "<group>"; };
 		837FF9F427AC1DAE008D0E35 /* UIView+Constrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constrains.swift"; sourceTree = "<group>"; };
 		837FF9F927AC1F4C008D0E35 /* RickAndMortyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTableViewCell.swift; sourceTree = "<group>"; };
+		837FF9FB27AC36A0008D0E35 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		837FF9FD27AC4689008D0E35 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		837FF9FF27AC46B8008D0E35 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		837FFA0127AC4788008D0E35 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 				837FF9EE27ABBE31008D0E35 /* Character.swift */,
 				837FF9F027ABBE5A008D0E35 /* Location.swift */,
 				837FF9F227ABBEB8008D0E35 /* CharacterPage.swift */,
+				837FFA0127AC4788008D0E35 /* Episode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				837FF9F927AC1F4C008D0E35 /* RickAndMortyTableViewCell.swift */,
+				837FF9FD27AC4689008D0E35 /* DetailView.swift */,
+				837FF9FF27AC46B8008D0E35 /* DetailTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				837FF9DA27AA9112008D0E35 /* ViewControllerWTableView.swift */,
+				837FF9FB27AC36A0008D0E35 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,8 +213,12 @@
 				837FF9F527AC1DAE008D0E35 /* UIView+Constrains.swift in Sources */,
 				837FF9EF27ABBE31008D0E35 /* Character.swift in Sources */,
 				837FF9FA27AC1F4C008D0E35 /* RickAndMortyTableViewCell.swift in Sources */,
+				837FF9FE27AC4689008D0E35 /* DetailView.swift in Sources */,
+				837FFA0027AC46B8008D0E35 /* DetailTableViewCell.swift in Sources */,
+				837FFA0227AC4788008D0E35 /* Episode.swift in Sources */,
 				837FF9D727AA9112008D0E35 /* AppDelegate.swift in Sources */,
 				837FF9F327ABBEB8008D0E35 /* CharacterPage.swift in Sources */,
+				837FF9FC27AC36A0008D0E35 /* DetailViewController.swift in Sources */,
 				837FF9F127ABBE5A008D0E35 /* Location.swift in Sources */,
 				837FF9D927AA9112008D0E35 /* SceneDelegate.swift in Sources */,
 			);

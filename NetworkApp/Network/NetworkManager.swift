@@ -11,7 +11,6 @@ import UIKit
 class NetworkManager {
     
     static func fetchPage(url: String, completion: @escaping (CharacterPage) -> Void) {
-        
         guard let url = URL(string: url) else {return}
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {return}
@@ -33,6 +32,20 @@ class NetworkManager {
             else {return}
             completion(data)
         }.resume()
+    }
+    
+    static func fetchEpisode(url: String, completion: @escaping (Episode) -> Void) {
+        guard let url = URL(string: url) else {return}
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {return}
+            do {
+                let episode = try JSONDecoder().decode(Episode.self, from: data)
+                completion(episode)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }.resume()
+        
     }
     
 }

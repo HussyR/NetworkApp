@@ -19,10 +19,29 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Rick And Morty App" id="890-9O-upT"/>
+                    <connections>
+                        <segue destination="wZL-iK-ebq" kind="show" identifier="segue" id="4mH-2k-bW4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="kOA-dS-QLc">
+            <objects>
+                <viewController id="wZL-iK-ebq" customClass="DetailViewController" customModule="NetworkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UpY-vJ-bMr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Uku-XY-SYa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LFE-xv-ict"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khe-BE-RjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fci-GH-Jfk">

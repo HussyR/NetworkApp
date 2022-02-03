@@ -14,7 +14,7 @@ class ViewControllerWTableView: UIViewController {
     let cellID = "cellID"
     
     var isLoaded = true
-    
+    var choosedCharacter: Character?
     
     var characterPages = [CharacterPage]()
     
@@ -22,6 +22,12 @@ class ViewControllerWTableView: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupData()
+    }
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? DetailViewController {
+            vc.character = choosedCharacter
+        }
     }
     
     private func setupData() {
@@ -65,14 +71,14 @@ extension ViewControllerWTableView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        choosedCharacter = characterPages[indexPath.row / 20].results[indexPath.row % 20]
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
     
 }
 //MARK: Pagination
 extension ViewControllerWTableView: UIScrollViewDelegate {
-    
     
     // Будет появляться при прокрутке вниз и ожидании подгрузки данных
     private func createSpinnerFooter () -> UIView {
@@ -86,26 +92,8 @@ extension ViewControllerWTableView: UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        view.endEditing(true)
         let position = scrollView.contentOffset.y + scrollView.frame.size.height
         // scrollView.contentOffset.y отвечает за длину прокрученного контента
-//        if (!isLoaded && !isSearch) {
-//            guard pages.count < maxPagesCount else {return}
-//            if (position > scrollView.contentSize.height) {
-//                print("load data")
-//                tableView.tableFooterView = createSpinnerFooter()
-//                isLoaded = true
-//                NetworlManager.fetchDataRickAndMorty(url: url + String(pages.count + 1)) { page in
-//                    self.pages.append(page)
-//                    self.characters += page.results
-//                    DispatchQueue.main.async {
-//                        self.tableView.reloadData()
-//                        self.tableView.tableFooterView = nil
-//                        self.isLoaded = false
-//                    }
-//                }
-//            }
-//        }
         if (!isLoaded) {
             guard characterPages.count < maxPages else {return}
             if (position > scrollView.contentSize.height + 20) {
